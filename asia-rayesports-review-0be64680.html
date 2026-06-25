@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>了解雷竞技 · 方向明确的电子竞技平台</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #f5f9fc;
+      color: #1a2b34;
+      line-height: 1.6;
+      padding: 0 16px;
+    }
+
+    .wrapper {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 40px 0 60px;
+    }
+
+    /* 开场 Hero 区域 — 故事叙述式开篇 */
+    .hero {
+      background: linear-gradient(145deg, #e0f0f5 0%, #cde7ef 100%);
+      border-radius: 28px;
+      padding: 48px 36px;
+      margin-bottom: 40px;
+      box-shadow: 0 8px 20px rgba(0, 80, 100, 0.06);
+      position: relative;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      right: 24px;
+      bottom: 20px;
+      width: 90px;
+      height: 90px;
+      background: radial-gradient(circle, rgba(0,168,150,0.08) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero-short {
+      font-size: 1.1rem;
+      letter-spacing: 0.02em;
+      color: #1f5b6b;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-short span {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background: #189a9a;
+      border-radius: 50%;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: #0f3b44;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      max-width: 70%;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #1f4f5a;
+      max-width: 75%;
+      background: rgba(255,255,255,0.55);
+      padding: 12px 20px;
+      border-radius: 40px;
+      backdrop-filter: blur(2px);
+      border: 1px solid rgba(255,255,255,0.7);
+    }
+
+    /* 承接段落 — 快速识别用途 */
+    .intro-block {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 36px 32px;
+      margin-bottom: 36px;
+      box-shadow: 0 4px 16px rgba(0, 60, 80, 0.04);
+      border-left: 6px solid #25a5a0;
+    }
+
+    .intro-block p {
+      font-size: 1.05rem;
+      margin-bottom: 18px;
+    }
+
+    .intro-block strong {
+      color: #116b6b;
+      font-weight: 600;
+    }
+
+    .intro-link-sentence {
+      background: #e8f3f5;
+      padding: 14px 20px;
+      border-radius: 60px;
+      display: inline-block;
+      font-size: 1rem;
+      color: #0f4b55;
+      margin-top: 6px;
+    }
+
+    .intro-link-sentence a {
+      color: #0d7a7a;
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 2px solid #8ccfcf;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .intro-link-sentence a:hover {
+      border-bottom-color: #0d7a7a;
+      color: #064545;
+    }
+
+    /* 特点列表 — 网格卡片 */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin: 40px 0 32px;
+    }
+
+    .feature-card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 28px 20px 24px;
+      box-shadow: 0 6px 18px rgba(0, 70, 90, 0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s;
+      border: 1px solid #deedf0;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(0, 100, 120, 0.08);
+      border-color: #b6d9de;
+    }
+
+    .feature-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      background: #d5edee;
+      border-radius: 16px;
+      margin-bottom: 18px;
+      font-size: 24px;
+      color: #0f7979;
+    }
+
+    .feature-card h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #104a52;
+      margin-bottom: 10px;
+    }
+
+    .feature-card p {
+      font-size: 0.95rem;
+      color: #2e4f57;
+      line-height: 1.5;
+    }
+
+    /* 温和结尾 — 类似 FAQ 摘要 + 收束 */
+    .closing-area {
+      background: #e1eef2;
+      border-radius: 28px;
+      padding: 32px 28px 36px;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: space-between;
+    }
+
+    .closing-item {
+      flex: 1 1 180px;
+      min-width: 150px;
+    }
+
+    .closing-item h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #0b4d4d;
+      letter-spacing: 0.01em;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .closing-item h4::before {
+      content: '▹';
+      color: #1f9999;
+      font-size: 1.0rem;
+    }
+
+    .closing-item p {
+      font-size: 0.9rem;
+      color: #285a63;
+      line-height: 1.5;
+    }
+
+    .closing-note {
+      flex-basis: 100%;
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid #b2d3d9;
+      font-size: 0.9rem;
+      color: #1a5b63;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .closing-note a {
+      color: #0b6f6f;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: #8ac7c7;
+      font-weight: 500;
+    }
+
+    .closing-note a:hover {
+      color: #043d3d;
+      text-decoration-color: #043d3d;
+    }
+
+    /* 响应式 */
+    @media (max-width: 900px) {
+      .hero h1 {
+        max-width: 100%;
+        font-size: 1.8rem;
+      }
+      .hero p {
+        max-width: 100%;
+      }
+      .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero {
+        padding: 32px 20px;
+      }
+      .hero h1 {
+        font-size: 1.5rem;
+      }
+      .hero-short {
+        font-size: 0.95rem;
+      }
+      .intro-block {
+        padding: 24px 18px;
+      }
+      .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .feature-card {
+        padding: 22px 18px;
+      }
+      .closing-area {
+        flex-direction: column;
+        gap: 20px;
+        padding: 24px 18px;
+      }
+      .closing-note {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 400px) {
+      body {
+        padding: 0 10px;
+      }
+      .wrapper {
+        padding: 24px 0 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <!-- 开场短句 hero -->
+    <div class="hero">
+      <div class="hero-short">
+        <span></span> 第一眼 · 找到用途
+      </div>
+      <h1>一个为电竞观赛<br>与数据而生的平台</h1>
+      <p>不绕弯子 —— 你想快速知道这个网站做什么，下面就是。</p>
+    </div>
+
+    <!-- 承接段落：清晰说明用途 -->
+    <div class="intro-block">
+      <p>
+        <strong>雷竞技</strong> 是一个以电子竞技赛事为核心的信息与服务型平台。无论是想追踪热门比赛、查看队伍数据，还是了解赛程与场次，这里都提供了直接的结构化内容。
+      </p>
+      <p>
+        平台本身不参与赛事运营，而是围绕赛事数据、观赛辅助以及社区讨论搭建基础功能。你可以把它理解成一个集中式的电竞情报站 —— 从大型联赛到小众项目，都试着用统一的方式呈现。
+      </p>
+      <div class="intro-link-sentence">
+        如果你希望直接访问网站，这里就是 <a href="https://asia-rayesports.com">雷竞技</a> 的地址。没有多余跳转，首页即可浏览主要内容。
+      </div>
+    </div>
+
+    <!-- 特点列表：卡片网格 -->
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <h3>赛事数据整合</h3>
+        <p>将主流电竞项目的实时比分、选手数据、历史对局汇总成清晰列表，减少在不同站点间切换的麻烦。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📅</div>
+        <h3>赛程与提醒</h3>
+        <p>按时间轴展示近期及进行中的赛事，支持筛选赛区与游戏，方便你提前规划观赛日程。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🧩</div>
+        <h3>多语言界面</h3>
+        <p>兼顾中文与英文用户，页面结构清晰，没有过度复杂的菜单，快速找到所需版块。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔍</div>
+        <h3>战队与选手档案</h3>
+        <p>每个参赛队伍和主要选手都有独立页面，收录近期战绩、常用英雄/角色以及关键数据。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📡</div>
+        <h3>观赛辅助信息</h3>
+        <p>提供官方直播链接、赛事规则简述以及版本更新摘要，辅助你更顺畅地理解比赛进程。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🧾</div>
+        <h3>社区讨论摘要</h3>
+        <p>聚合部分社区中的赛后讨论与数据解读，让观点与数据相互补充，但不代替原始讨论。</p>
+      </div>
+    </div>
+
+    <!-- 温和结尾：FAQ 摘要 + 收束 -->
+    <div class="closing-area">
+      <div class="closing-item">
+        <h4>适合什么人？</h4>
+        <p>平时看比赛、查数据、关注战队动态的普通观众与轻度分析爱好者。不需要注册也能浏览大部分内容。</p>
+      </div>
+      <div class="closing-item">
+        <h4>信息准确吗？</h4>
+        <p>数据来源为公开赛事信息与官方接口，平台会做格式化整理，但实时性以赛事官方为准。</p>
+      </div>
+      <div class="closing-item">
+        <h4>是否有付费内容？</h4>
+        <p>目前所有浏览与基础查询功能免费。不涉及虚拟商品交易或竞猜类服务。</p>
+      </div>
+      <div class="closing-note">
+        <span>页面内容仅作介绍，具体功能以实际网站为准。</span>
+        <span>访问 <a href="https://asia-rayesports.com">雷竞技</a> 获得完整体验</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
